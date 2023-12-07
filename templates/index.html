@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My SaaS Landing Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',    filename='css/style.css') }}">
+</head>
+<body>
+    <div class="landing-container">
+        <h1>Welcome to My SaaS Application</h1>
+        <p>Discover the features and benefits of our AI-Based Language Learning Companion.</p>
+        <a href="{{ url_for('login')}}" class="login-button">Log In</a>
+    </div>
+</body>
+</html>

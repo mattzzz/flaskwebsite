@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> <!-- Link to your CSS file -->
+
+</head>
+<body>
+    <button id="logoutButton">Logout</button>
+    
+    <div id="preference-section">
+        <h2>Welcome, <span id="username">{{ session['username'] }}</span></h2>
+        <label for="preference">Edit Preference:</label>
+        <input type="text" id="preference">
+        <button onclick="updatePreference()">Save</button>
+    </div>
+    
+    <div id="btc-chart-container">
+        <h3>BTC/USD Price - Last 24 Hours</h3>
+        <canvas id="btcChart"></canvas>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/min/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@1.0.0"></script>
+
+    <script src="{{ url_for('static', filename='dashboard.js') }}"></script> <!-- Link to your JS file -->
+
+
+   
+
+</body>
+</html>
